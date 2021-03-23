@@ -2,12 +2,13 @@ import {Controller} from 'stimulus';
 
 export default class extends Controller {
   connect() {
-    this.element.innerHTML = 'You have clicked me o times';
     this.count = 0;
+    const counterNumberElement = this.element
+      .getElementsByClassName('counter-count')[0];
 
     this.element.addEventListener('click', () => {
       this.count++;
-      this.element.innerHTML = this.count;
+      counterNumberElement.innerHTML = this.count;
     })
   }
 }
