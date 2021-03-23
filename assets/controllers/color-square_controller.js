@@ -1,7 +1,7 @@
 import { Controller } from 'stimulus';
 
 export default class extends Controller {
-  connect() {
+  selectColor() {
     console.log(this.element.innerHTML);
   }
 }
