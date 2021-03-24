@@ -22,8 +22,13 @@ export default class extends Controller {
       confirmButtonText: this.confirmButtonTextValue || 'Yes',
       showLoaderOnConfirm: true,
       preConfirm: () => {
-        this.element.submit()
+        this.submitForm()
       }
     })
   }
+
+  submitForm() {
+    console.log('submitting form!');
+  }
+
 }
