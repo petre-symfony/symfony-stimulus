@@ -7,13 +7,17 @@ export default class extends Controller {
 
   connect(){
     this.selectTarget.classList.add('d-none');
+
+    console.log(this.element.dataset.colorId);
   }
 
   selectColor(event) {
-    const clickedColorId = event.currentTarget.dataset.colorId;
+    this.setSelectedColor(event.currentTarget.dataset.colorId)
+  }
 
+  setSelectedColor(clickedColorId) {
     if (clickedColorId === this.selectedColorId) {
-      event.currentTarget.classList.remove('selected');
+      this.findSelectedColorSquare().classList.remove('selected');
       this.selectedColorId = null;
       this.selectTarget.value = '';
 
@@ -26,7 +30,14 @@ export default class extends Controller {
       element.classList.remove('selected');
     });
 
-    event.currentTarget.classList.add('selected');
+    this.findSelectedColorSquare().classList.add('selected');
     this.selectTarget.value = this.selectedColorId;
+  }
+
+  /*
+  * @return {Element|null}
+   */
+  findSelectedColorSquare(){
+    return this.colorSquareTargets.find(element => element.dataset.colorId === this.selectedColorId)
   }
 }
