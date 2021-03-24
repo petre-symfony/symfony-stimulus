@@ -13,11 +13,19 @@ export default class extends Controller {
   }
 
   selectColor(event) {
-    this.setSelectedColor(event.currentTarget.dataset.colorId)
+    this.colorIdValue = event.currentTarget.dataset.colorId;
   }
 
   colorIdValueChanged(){
-    this.setSelectedColor(this.colorIdValue);
+    this.selectTarget.value = this.colorIdValue;
+
+    this.colorSquareTargets.find(element => {
+      if (element.dataset.colorId == this.colorIdValue) {
+        element.classList.add('selected');
+      } else {
+        element.classList.remove('selected')
+      }
+    })
   }
 
   setSelectedColor(clickedColorId) {
