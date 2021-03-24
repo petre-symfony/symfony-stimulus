@@ -6,7 +6,8 @@ export default class extends Controller {
     title: String,
     text: String,
     icon: String,
-    confirmButtonText: String
+    confirmButtonText: String,
+    submitAsync: Boolean
   }
 
   onSubmit(event) {
@@ -28,6 +29,12 @@ export default class extends Controller {
   }
 
   submitForm() {
+    if (!this.submitAsync) {
+      this.element.submit();
+
+      return ;
+    }
+    
     return fetch(this.element.action, {
       method: this.element.method,
       body: new URLSearchParams(new FormData(this.element))

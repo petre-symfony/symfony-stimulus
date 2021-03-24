@@ -52,7 +52,8 @@
 											{{ stimulus_controller('submit-confirm', {
 												title: 'Remove this item?',
 												icon: 'warning',
-												confirmButtontext: 'Yes, remove it!'
+												confirmButtontext: 'Yes, remove it!',
+												submitAsync: true
 											}) }}
 											data-action="submit-confirm#onSubmit"
 									>
