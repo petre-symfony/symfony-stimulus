@@ -19,9 +19,9 @@ export default class extends Controller {
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: this.confirmButtonTextValue || 'Yes'
-    }).then((result) => {
-      if (result.isConfirmed) {
+      confirmButtonText: this.confirmButtonTextValue || 'Yes',
+      showLoaderOnConfirm: true,
+      preConfirm: () => {
         this.element.submit()
       }
     })
