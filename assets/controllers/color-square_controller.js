@@ -43,6 +43,6 @@ export default class extends Controller {
   * @return {Element|null}
    */
   findSelectedColorSquare(){
-    return this.colorSquareTargets.find(element => element.dataset.colorId === this.selectedColorId)
+    return this.colorSquareTargets.find(element => element.dataset.colorId == this.selectedColorId)
   }
 }
