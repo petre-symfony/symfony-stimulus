@@ -32,7 +32,10 @@
 					</div>
 					<div class="col-9">
 						<form>
-							<div class="input-group">
+							<div
+									class="input-group"
+									{{ stimulus_controller('search-preview') }}
+							>
 								<input
 										name="q"
 										value="{{ searchTerm }}"
