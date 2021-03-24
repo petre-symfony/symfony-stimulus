@@ -28,7 +28,10 @@ export default class extends Controller {
   }
 
   submitForm() {
-    console.log('submitting form!');
+    return fetch(this.element.action, {
+      method: this.element.method,
+      body: new URLSearchParams(new FormData(this.element))
+    });
   }
 
 }
