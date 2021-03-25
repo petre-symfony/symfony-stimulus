@@ -25,6 +25,16 @@ class AdminController extends AbstractController {
 			],
 		]);
 
+		$chart->setOptions([
+			'scales' => [
+				'yAxes' => [[
+					'ticks' => [
+						'beginAtZero' => true
+					]
+				]]
+			]
+		]);
+
 
 		return $this->render('admin/dashboard.html.twig', [
 			'chart' => $chart
