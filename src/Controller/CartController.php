@@ -34,6 +34,14 @@ class CartController extends AbstractController {
 	}
 
 	/**
+	 * @Route("/cart/_list", name="app_cart_list")
+	 */
+	public function _shoppingCartList(CartStorage $cartStorage){
+		return $this->render('cart/_cartList.html.twig', [
+			'cart' => $cartStorage->getOrCreateCart()
+		]);
+	}
+	/**
 	 * @Route("/product/{id}", name="app_cart_add_item", methods={"POST"})
 	 */
 	public function addItemToCart(Product $product, Request $request, CategoryRepository $categoryRepository, CartStorage $cartStorage) {
