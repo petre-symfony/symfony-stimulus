@@ -34,7 +34,7 @@ export default class extends Controller {
 
       return ;
     }
-    
+
     return fetch(this.element.action, {
       method: this.element.method,
       body: new URLSearchParams(new FormData(this.element))
