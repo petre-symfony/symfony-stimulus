@@ -12,7 +12,7 @@ export default class extends Controller {
   }
 
   connect() {
-    useDispatch(this, { debug: true });
+    useDispatch(this);
   }
 
   onSubmit(event) {
@@ -34,7 +34,7 @@ export default class extends Controller {
   }
 
   async submitForm() {
-    if (!this.submitAsync) {
+    if (!this.submitAsyncValue) {
       this.element.submit();
 
       return ;
