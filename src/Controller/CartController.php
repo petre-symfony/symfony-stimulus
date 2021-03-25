@@ -34,7 +34,7 @@ class CartController extends AbstractController {
 	}
 
 	/**
-	 * @Route("/cart/_list", name="app_cart_list")
+	 * @Route("/cart/_list", name="_app_cart_list")
 	 */
 	public function _shoppingCartList(CartStorage $cartStorage){
 		return $this->render('cart/_cartList.html.twig', [
