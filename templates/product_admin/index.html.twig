@@ -8,8 +8,11 @@
             <h1 class="me-3">Product index</h1>
 
             <div {{ stimulus_controller('modal-form') }}>
-                <button class="btn btn-primary btn-sm">
-                    Add+
+                <button
+                    class="btn btn-primary btn-sm"
+                    data-action="modal-form#openModal"
+                >
+                  Add+
                 </button>
             </div>
         </div>
