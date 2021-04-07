@@ -15,7 +15,9 @@
                   Add+
                 </button>
 
-                {{ include('_modal.html.twig') }}
+                {{ include('_modal.html.twig', {
+                    modalTitle: 'Add a new Product'
+                }) }}
             </div>
         </div>
 
