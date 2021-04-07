@@ -148,3 +148,7 @@ h1 {
     color: inherit;
 }
 
+.modal-body button {
+    display: none;
+}
+
