@@ -15,4 +15,10 @@ export default class extends Controller {
 
     this.modalBodyTarget.innerHTML = await $.ajax(this.formUrlValue);
   }
+
+  submitForm() {
+    const $form = $(this.modalBodyTarget).find('form');
+    //this.modalBodyTarget.findElementsByTagName('form')[0]
+    console.log($form.serialize());
+  }
 }
