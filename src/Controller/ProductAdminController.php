@@ -39,6 +39,10 @@ class ProductAdminController extends AbstractController
             $entityManager->persist($product);
             $entityManager->flush();
 
+            if ($request->isXmlHttpRequest()) {
+								return new Response(null, 204);
+						}
+
             return $this->redirectToRoute('product_admin_index');
         }
 
