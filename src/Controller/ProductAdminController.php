@@ -51,7 +51,10 @@ class ProductAdminController extends AbstractController
         return $this->render('product_admin/' . $template, [
             'product' => $product,
             'form' => $form->createView(),
-        ]);
+        ], new Response(
+        	null,
+					$form->isSubmitted() ? 422 : 200
+				));
     }
 
     /**
