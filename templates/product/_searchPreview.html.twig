@@ -1,13 +1,14 @@
 <div class="list-group">
   {% for product in products %}
-    <a href=
-       "{{ path('app_product', { id: product.id}) }}"
+    <a
+       role="option"
+       href="{{ path('app_product', { id: product.id}) }}"
        class="list-group-item list-group-item-action"
     >
       {{ product.name }}
     </a>
   {%  else %}
-    <div class="list-group-item">
+    <div class="list-group-item" role="option" aria-disabled="true">
       No results found!
     </div>
   {% endfor %}
