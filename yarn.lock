@@ -4925,10 +4925,10 @@ stackframe@^1.1.1:
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
 
-stimulus-use@^0.23.0:
-  version "0.23.0"
-  resolved "https://registry.yarnpkg.com/stimulus-use/-/stimulus-use-0.23.0.tgz#7f35e99c98dc4ded59ada8d89a83b6a85b847099"
-  integrity sha512-9oYoT1kSzPLfvNHf4RoZKk6LTEtZ07mzUtq3BY5Cp1068eimgXES+TxGV2Cze8CeGBubWJXUxJ15LeLlR3bBtA==
+stimulus-use@^0.24.0-2:
+  version "0.24.0-2"
+  resolved "https://registry.yarnpkg.com/stimulus-use/-/stimulus-use-0.24.0-2.tgz#4778f0761ace9dbd0fc311fa5371e876ba8a2636"
+  integrity sha512-QpOGlwkPbYtyiqFqwT96huKa9AkW8sNcWpwDVrm/75gdvHwOKrB7O0lZ7INVSWF+3eJp6I+OSIz+zE1y25wLeg==
 
 stimulus@^2.0.0:
   version "2.0.0"
